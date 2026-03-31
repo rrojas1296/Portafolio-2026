@@ -1,0 +1,12 @@
+{
+  "Header": {
+    "logo": "Drojas",
+    "sections": {
+      "home": "Inicio",
+      "about": "Acerca de",
+      "experience": "Experiencia",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    }
+  }
+}
