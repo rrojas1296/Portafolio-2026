@@ -14,6 +14,9 @@ import {
 import { useEffect, useRef } from "react";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { cn } from "@/lib/utils";
+import SpainFlagIcon from "../Icons/SpainFlagIcon";
+import USFlagIcon from "../Icons/USFlagIcon";
+import BrazilFlagIcon from "../Icons/BrazilFlagIcon";
 
 const Header = () => {
   const active = useActiveSection();
@@ -94,19 +97,22 @@ const Header = () => {
                 className="flex justify-between"
                 onClick={() => handleLocale("es")}
               >
-                <span>{t("locale.es")}</span> <span>🇪🇸</span>
+                <span>{t("locale.es")}</span>
+                <SpainFlagIcon className="w-5 h-5" />
               </DropdownMenuItem>
               <DropdownMenuItem
                 className="flex justify-between"
                 onClick={() => handleLocale("en")}
               >
-                <span>{t("locale.en")} </span> <span>🇺🇸</span>
+                <span>{t("locale.en")}</span>
+                <USFlagIcon className="w-5 h-5" />
               </DropdownMenuItem>
               <DropdownMenuItem
                 className="flex justify-between"
                 onClick={() => handleLocale("pt")}
               >
-                <span>{t("locale.pt")} </span> <span>🇧🇷</span>
+                <span>{t("locale.pt")}</span>
+                <BrazilFlagIcon className="w-5 h-5" />
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
