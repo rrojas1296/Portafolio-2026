@@ -2,7 +2,7 @@
   --bg-1: #ffffff;
   --bg-2: #f3f0fa;
 
-  --bg-linear: linear-gradient(0deg, rgb(255, 255, 255), rgb(244, 241, 255));
+  --bg-linear: linear-gradient(180deg, rgb(255, 255, 255), rgb(244, 241, 255));
   --bg-hero: linear-gradient(180deg, rgb(226, 218, 255), rgb(255, 255, 255));
 
   --primary-500: #592bff;
@@ -19,7 +19,7 @@
   --bg-1: #060509;
   --bg-2: #1a1623;
 
-  --bg-linear: linear-gradient(0deg, rgb(6, 5, 9), rgb(24, 19, 35));
+  --bg-linear: linear-gradient(180deg, rgb(6, 5, 9), rgb(24, 19, 35));
   --bg-hero: linear-gradient(180deg, rgb(21, 17, 36), rgb(6, 5, 9));
 
   --primary-500: #592bff;

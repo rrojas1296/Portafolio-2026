@@ -1,5 +1,5 @@
 {
-  "Hero": {
+  "Header": {
     "logo": "Drojas",
     "sections": {
       "home": "Home",
@@ -7,6 +7,38 @@
       "experience": "Experience",
       "projects": "Projects",
       "contact": "Contact"
+    },
+    "locale": {
+      "es": "Spanish",
+      "en": "English"
     }
+  },
+  "Hero": {
+    "role": "Fullstack Developer",
+    "name": "Diego Rojas",
+    "description": "Full Stack Developer focused on frontend, specialized in React, Next.js and TypeScript — creating modular architectures, secure systems and high-quality user experiences.",
+    "contactButton": "Contact"
+  },
+  "About": {
+    "title": "How I build software",
+    "subtitle": "I focus on creating scalable, secure and maintainable applications, prioritizing user experience and code quality.",
+    "cards": {
+      "security": {
+        "title": "Security first",
+        "description": "Implement robust authentication, access control (RBAC) and good practices to protect data and systems."
+      },
+      "performance": {
+        "title": "Performance & UX",
+        "description": "Optimize applications to be fast, fluid and focused on a great user experience and reducing load times."
+      },
+      "arquitecture": {
+        "title": "UI Modular Architecture",
+        "description": "Design scalable systems with reusable components and maintainable code to facilitate growth and evolution."
+      }
+    }
+  },
+  "Skills": {
+    "title": "Skills",
+    "subtitle": "I mainly work with"
   }
 }

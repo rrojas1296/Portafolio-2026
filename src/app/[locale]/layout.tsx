@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { Poppins, Geist } from "next/font/google";
-import "./styles/index.css";
+import { Poppins } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { cn } from "@/lib/utils";
-
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+import "@/styles/index.css";
+import ThemeProvider from "@/providers/ThemeProvider";
 
 const font = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -21,9 +20,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("dark", font.className, "font-sans", geist.variable)}>
+    <html lang="en" className={cn(font.className, "font-sans bg-bg-1")}>
       <body>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <ThemeProvider>
+          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
