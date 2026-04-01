@@ -102,6 +102,12 @@ const Header = () => {
               >
                 <span>{t("locale.en")} </span> <span>🇺🇸</span>
               </DropdownMenuItem>
+              <DropdownMenuItem
+                className="flex justify-between"
+                onClick={() => handleLocale("pt")}
+              >
+                <span>{t("locale.pt")} </span> <span>🇧🇷</span>
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
