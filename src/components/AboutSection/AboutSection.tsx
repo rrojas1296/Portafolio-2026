@@ -7,7 +7,7 @@ import Image from "next/image";
 const AboutSection = () => {
   const t = useTranslations("About");
   return (
-    <div className=" max-w-7xl m-auto w-10/12 mt-5">
+    <section id="about" className=" max-w-7xl m-auto w-10/12 mt-5">
       <h1 className="font-bold text-text-1 text-3xl">{t("title")}</h1>
       <p className="text-text-2 text-sm mt-1">{t("subtitle")}</p>
 
@@ -73,7 +73,7 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

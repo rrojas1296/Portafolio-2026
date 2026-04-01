@@ -75,7 +75,7 @@ export const skills = [
   },
   {
     id: "12",
-    label: "Css",
+    label: "CSS",
     icon: CssIcon,
   },
   {

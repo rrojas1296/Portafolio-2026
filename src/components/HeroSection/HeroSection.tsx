@@ -1,16 +1,17 @@
 import HeroImage from "@/assets/HeroImage.png";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { Button } from "../shadcn/button";
 import { RocketIcon } from "lucide-react";
 import GithubIcon from "../Icons/GithubIcon";
 import LinkedinIcon from "../Icons/LinkedinIcon";
 import InstagramIcon from "../Icons/InstagramIcon";
+import Button from "../Button/Button";
 
 const HeroSection = () => {
   const t = useTranslations("Hero");
   return (
-    <div
+    <section
+      id="hero"
       className="h-screen relative"
       style={{
         backgroundImage: "var(--bg-hero)",
@@ -30,9 +31,9 @@ const HeroSection = () => {
             <LinkedinIcon className="text-text-1" />
             <InstagramIcon className="text-text-1" />
           </div>
-          <Button variant="default" className="h-11 px-5 rounded-xl w-fit">
+          <Button className="w-fit">
             {t("contactButton")}
-            <RocketIcon className="text-text-3 " />
+            <RocketIcon className="text-text-3 w-5 h-5" />
           </Button>
         </div>
         <Image
@@ -42,7 +43,7 @@ const HeroSection = () => {
           loading="eager"
         />
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -7,31 +7,31 @@ import {
 } from "lucide-react";
 export const sections = [
   {
-    id: "1",
+    id: "hero",
     label: "sections.home",
     href: "#home",
     icon: HomeIcon,
   },
   {
-    id: "2",
+    id: "about",
     label: "sections.about",
     href: "#about",
     icon: BookOpenIcon,
   },
   {
-    id: "3",
+    id: "experience",
     label: "sections.experience",
     href: "#experience",
     icon: BriefcaseBusinessIcon,
   },
   {
-    id: "4",
+    id: "projects",
     label: "sections.projects",
     href: "#projects",
     icon: BoxIcon,
   },
   {
-    id: "5",
+    id: "contact",
     label: "sections.contact",
     href: "#contact",
     icon: MailIcon,

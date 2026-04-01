@@ -2,7 +2,7 @@
 import { sections } from "@/constants/sections";
 import { useRouter } from "@/i18n/navigation";
 import { useThemeStore } from "@/store/useThemeStore";
-import { GlobeIcon, MoonIcon, SunIcon } from "lucide-react";
+import { LanguagesIcon, MoonIcon, SunIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import {
@@ -12,8 +12,11 @@ import {
   DropdownMenuTrigger,
 } from "../shadcn/dropdown-menu";
 import { useEffect, useRef } from "react";
+import { useActiveSection } from "@/hooks/useActiveSection";
+import { cn } from "@/lib/utils";
 
 const Header = () => {
+  const active = useActiveSection();
   const headerRef = useRef<null | HTMLDivElement>(null);
   const t = useTranslations("Header");
   const router = useRouter();
@@ -55,7 +58,14 @@ const Header = () => {
         <div className="hidden lg:flex gap-8">
           {sections.map(({ id, href, label }) => {
             return (
-              <Link key={id} href={href} className="text-text-1 text-sm">
+              <Link
+                key={id}
+                href={href}
+                className={cn(
+                  "text-text-1 text-sm",
+                  active === id && "text-primary-500 font-bold",
+                )}
+              >
                 {t(label)}
               </Link>
             );
@@ -68,15 +78,15 @@ const Header = () => {
             onClick={handleTheme}
           >
             {theme === "dark" ? (
-              <MoonIcon className="text-text-1" />
+              <MoonIcon className="text-text-1 h-5 w-5" />
             ) : (
-              <SunIcon className="text-text-1" />
+              <SunIcon className="text-text-1 h-5 w-5" />
             )}
           </button>
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
               <button className="cursor-pointer h-10 w-10 flex items-center justify-center">
-                <GlobeIcon className="text-text-1" />
+                <LanguagesIcon className="text-text-1 h-5 w-5" />
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
