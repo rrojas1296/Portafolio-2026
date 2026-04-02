@@ -31,7 +31,7 @@ const HeroSection = () => {
             <LinkedinIcon className="text-text-1" />
             <InstagramIcon className="text-text-1" />
           </div>
-          <Button className="w-fit">
+          <Button className="w-fit px-5">
             {t("contactButton")}
             <RocketIcon className="text-text-3 w-5 h-5" />
           </Button>

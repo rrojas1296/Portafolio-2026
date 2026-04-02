@@ -16,6 +16,11 @@ import TypescriptIcon from "@/components/Icons/TypescriptIcon";
 import ZustandImage from "@/assets/ZustandIcon.png";
 import ReduxIcon from "@/components/Icons/ReduxIcon";
 import ViteIcon from "@/components/Icons/ViteIcon";
+import NeovimIcon from "@/components/Icons/NeovimIcon";
+import LuaIcon from "@/components/Icons/LuaIcon";
+import VSCodeIcon from "@/components/Icons/VSCodeIcon";
+import ClaudeCodeIcon from "@/components/Icons/ClaudeCodeIcon";
+import CursorIcon from "@/components/Icons/CursorIcon";
 
 export const skills = [
   {
@@ -107,5 +112,30 @@ export const skills = [
     id: "18",
     label: "Vite",
     icon: ViteIcon,
+  },
+  {
+    id: "19",
+    label: "Neovim",
+    icon: NeovimIcon,
+  },
+  {
+    id: "20",
+    label: "Lua",
+    icon: LuaIcon,
+  },
+  {
+    id: "21",
+    label: "VSCode",
+    icon: VSCodeIcon,
+  },
+  {
+    id: "22",
+    label: "Claude Code",
+    icon: ClaudeCodeIcon,
+  },
+  {
+    id: "23",
+    label: "Cursor",
+    icon: CursorIcon,
   },
 ];

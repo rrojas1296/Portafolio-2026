@@ -53,7 +53,7 @@ const Header = () => {
     <div className="fixed top-0 left-0 w-full z-20 h-20 flex items-end justify-center lg:h-25">
       <div
         ref={headerRef}
-        className="flex px-4 justify-between py-2 border border-transparent items-center  rounded-xl w-10/12 max-w-7xl transition-all"
+        className="flex px-0 justify-between py-2 border border-transparent items-center  rounded-xl w-10/12 max-w-7xl transition-all"
       >
         <Link className="font-bold text-xl text-text-1" href="/">
           Drojas
@@ -78,6 +78,7 @@ const Header = () => {
         <div className="flex items-center gap-4">
           <button
             className="cursor-pointer h-10 w-10 flex items-center justify-center"
+            aria-label="Toggle dark mode"
             onClick={handleTheme}
           >
             {theme === "dark" ? (
@@ -88,7 +89,10 @@ const Header = () => {
           </button>
           <DropdownMenu modal={false}>
             <DropdownMenuTrigger asChild>
-              <button className="cursor-pointer h-10 w-10 flex items-center justify-center">
+              <button
+                aria-label="Languages"
+                className="cursor-pointer h-10 w-10 flex items-center justify-center"
+              >
                 <LanguagesIcon className="text-text-1 h-5 w-5" />
               </button>
             </DropdownMenuTrigger>

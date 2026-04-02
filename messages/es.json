@@ -41,5 +41,48 @@
   "Skills": {
     "title": "Habilidades",
     "subtitle": "Trabajo principalmente con"
+  },
+  "Experience": {
+    "title": "Mi experiencia profesional",
+    "subtitle": "Más de 4 años desarrollando aplicaciones web escalables, dashboards y sistemas SaaS para empresas internacionales.",
+    "timeline": {
+      "past": "Pasado",
+      "present": "Presente",
+      "toPresent": "al presente",
+      "experiences": {
+        "inetum": {
+          "name": "Inetum",
+          "role": "Desarrollador Frontend",
+          "date": "Septiembre 2022",
+          "description": "Participe en la mejora de un sistema de gestión de catálogo backoffice para Ésika, implementando nuevas funcionalidades e integraciones para optimizar la usabilidad, interactividad, rendimiento y seguridad."
+        },
+        "jabu": {
+          "name": "Jabu",
+          "role": "Desarrollador Frontend",
+          "date": "Abril 2022",
+          "description": "Participe en el desarrollo de JabuPay, una plataforma fintech serverless para la gestión de efectivo digital. Enfocarse en implementar la lógica backend mediante funciones serverless y flujos de autenticación seguros, mientras se contribuye a la consistencia del frontend y al rendimiento del sistema."
+        },
+        "lapzo": {
+          "name": "Lazpo",
+          "role": "Desarrollador Fullstack",
+          "date": "Mayo 2023",
+          "description": "Contribuí al desarrollo de una plataforma educativa de nivel empresarial que proporciona a las empresas herramientas para gestionar cursos, lecciones, instructores y programas de formación. Trabajé tanto en frontend como en backend, diseñando interfaces de usuario modernas y desarrollando aplicaciones web escalables."
+        }
+      }
+    }
+  },
+  "Projects": {
+    "title": "Projectos",
+    "subtitle": "Aplicaciones enfocadas en performance, escalabilidad y experiencia de usuario.",
+    "projects": {
+      "buttons": {
+        "preview": "Previsualizar",
+        "github": "Github"
+      },
+      "neovim": {
+        "name": "Neovim conf",
+        "description": "Configuracion de neovim utilizando entermante Lua. Esta configuracion esta preparada para soportar typescript project usando react y vue"
+      }
+    }
   }
 }

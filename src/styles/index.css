@@ -12,6 +12,8 @@
   --color-bg-linear: var(--bg-linear);
   --color-bg-hero: var(--bg-hero);
 
+  --color-bg-badge: var(--bg-badge);
+
   --color-primary-500: var(--primary-500);
 
   --color-text-1: var(--text-1);
@@ -146,5 +148,5 @@ button {
 }
 
 .active-header {
-  @apply border-border-2 bg-white dark:bg-bg-2;
+  @apply border-border-2 bg-white dark:bg-bg-2 px-4 lg:px-8;
 }
