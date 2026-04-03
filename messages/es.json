@@ -84,5 +84,60 @@
         "description": "Configuracion de neovim utilizando entermante Lua. Esta configuracion esta preparada para soportar typescript project usando react y vue"
       }
     }
+  },
+  "Contact": {
+    "title": "Trabajemos juntos",
+    "subtitle": "Estoy disponible para oportunidades remotas, proyectos freelance o colaboraciones en productos SaaS.",
+    "info": {
+      "email": "rrojas1296@gmail.com",
+      "phone": "+51 976469908"
+    },
+    "form": {
+      "firstName": {
+        "placeholder": "Jhon",
+        "label": "Nombre",
+        "errors": {
+          "required": "Ingrese un nombre"
+        }
+      },
+      "lastName": {
+        "placeholder": "Doe",
+        "label": "Apellido",
+        "errors": {
+          "required": "Ingrese un apellido"
+        }
+      },
+      "email": {
+        "placeholder": "ejemplo@correo.com",
+        "label": "Email",
+        "errors": {
+          "required": "Ingrese un correo",
+          "email": "Ingrese un correo valido"
+        }
+      },
+      "phone": {
+        "placeholder": "999999999",
+        "label": "Celular",
+        "errors": {
+          "required": "Ingrese un mensaje"
+        }
+      },
+
+      "subject": {
+        "placeholder": "Asunto",
+        "label": "Asunto",
+        "errors": {
+          "required": "Ingrese un asunto"
+        }
+      },
+      "message": {
+        "placeholder": "Mensaje",
+        "label": "Mensaje",
+        "errors": {
+          "required": "Ingrese un mensaje"
+        }
+      },
+      "submitButton": "Enviar"
+    }
   }
 }
