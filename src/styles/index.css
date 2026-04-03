@@ -147,6 +147,18 @@ button {
   );
 }
 
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .active-header {
   @apply border-border-2 bg-white dark:bg-bg-2 px-4 lg:px-8;
 }

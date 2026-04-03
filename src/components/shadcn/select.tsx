@@ -80,7 +80,7 @@ function SelectContent({
         align={align}
         {...props}
       >
-        <SelectScrollUpButton />
+        <SelectScrollUpButton className="bg-bg-2" />
         <SelectPrimitive.Viewport
           data-position={position}
           className={cn(
@@ -90,7 +90,7 @@ function SelectContent({
         >
           {children}
         </SelectPrimitive.Viewport>
-        <SelectScrollDownButton />
+        <SelectScrollDownButton className="bg-bg-2" />
       </SelectPrimitive.Content>
     </SelectPrimitive.Portal>
   );

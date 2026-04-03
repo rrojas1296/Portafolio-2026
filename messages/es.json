@@ -119,7 +119,7 @@
         "placeholder": "999999999",
         "label": "Celular",
         "errors": {
-          "required": "Ingrese un mensaje"
+          "required": "Ingrese un numero correcto"
         }
       },
 

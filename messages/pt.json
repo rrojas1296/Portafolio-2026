@@ -17,12 +17,12 @@
   "Hero": {
     "role": "Desenvolvedor Fullstack",
     "name": "Diego Rojas",
-    "description": "Desenvolvedor Full Stack com foco em frontend, especializado em React, Next.js e TypeScript — criando arquiteturas modulares, sistemas seguros e experiências de usuário de alta qualidade.",
-    "contactButton": "Entrar em contato"
+    "description": "Desenvolvedor Full Stack focado em frontend, especializado em React, Next.js e TypeScript — criando arquiteturas modulares, sistemas seguros e experiências de usuário de alta qualidade.",
+    "contactButton": "Contato"
   },
   "About": {
-    "title": "Como construo software",
-    "subtitle": "Foco em criar aplicações escaláveis, seguras e sustentáveis, priorizando sempre a experiência do usuário e a qualidade do código.",
+    "title": "Como eu construo software",
+    "subtitle": "Eu foco em criar aplicações escaláveis, seguras e de fácil manutenção, sempre priorizando a experiência do usuário e a qualidade do código.",
     "cards": {
       "security": {
         "title": "Segurança em primeiro lugar",
@@ -30,16 +30,113 @@
       },
       "performance": {
         "title": "Performance & UX",
-        "description": "Otimizo aplicações para que sejam rápidas, fluidas e focadas em uma excelente experiência do usuário, reduzindo tempos de carregamento."
+        "description": "Otimizo aplicações para que sejam rápidas, fluidas e focadas em uma excelente experiência do usuário, reduzindo o tempo de carregamento."
       },
       "arquitecture": {
         "title": "Arquitetura UI Modular",
-        "description": "Desenho sistemas escaláveis com componentes reutilizáveis e código sustentável para facilitar crescimento e evolução."
+        "description": "Projeto sistemas escaláveis com componentes reutilizáveis e código de fácil manutenção para facilitar crescimento e evolução."
       }
     }
   },
   "Skills": {
     "title": "Habilidades",
     "subtitle": "Trabalho principalmente com"
+  },
+  "Experience": {
+    "title": "Minha experiência profissional",
+    "subtitle": "Mais de 4 anos desenvolvendo aplicações web escaláveis, dashboards e sistemas SaaS para empresas internacionais.",
+    "timeline": {
+      "past": "Passado",
+      "present": "Presente",
+      "toPresent": "até o presente",
+      "experiences": {
+        "inetum": {
+          "name": "Inetum",
+          "role": "Desenvolvedor Frontend",
+          "date": "Setembro 2022",
+          "description": "Participei na melhoria de um sistema de gestão de catálogo backoffice para Ésika, implementando novas funcionalidades e integrações para melhorar usabilidade, interatividade, performance e segurança."
+        },
+        "jabu": {
+          "name": "Jabu",
+          "role": "Desenvolvedor Frontend",
+          "date": "Abril 2022",
+          "description": "Participei no desenvolvimento do JabuPay, uma plataforma fintech serverless para gestão de dinheiro digital. Focado na implementação da lógica backend com funções serverless e fluxos de autenticação seguros, contribuindo também para consistência do frontend e performance do sistema."
+        },
+        "lapzo": {
+          "name": "Lazpo",
+          "role": "Desenvolvedor Fullstack",
+          "date": "Maio 2023",
+          "description": "Contribuí para o desenvolvimento de uma plataforma educacional de nível empresarial que oferece ferramentas para gerenciar cursos, aulas, instrutores e programas de treinamento. Trabalhei tanto no frontend quanto no backend, criando interfaces modernas e aplicações escaláveis."
+        }
+      }
+    }
+  },
+  "Projects": {
+    "title": "Projetos",
+    "subtitle": "Aplicações focadas em performance, escalabilidade e experiência do usuário.",
+    "projects": {
+      "buttons": {
+        "preview": "Visualizar",
+        "github": "GitHub"
+      },
+      "neovim": {
+        "name": "Configuração Neovim",
+        "description": "Configuração do Neovim construída inteiramente em Lua. Preparada para suportar projetos TypeScript usando React e Vue."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Vamos trabalhar juntos",
+    "subtitle": "Estou disponível para oportunidades remotas, projetos freelance ou colaborações em produtos SaaS.",
+    "info": {
+      "email": "rrojas1296@gmail.com",
+      "phone": "+51 976469908"
+    },
+    "form": {
+      "firstName": {
+        "placeholder": "João",
+        "label": "Nome",
+        "errors": {
+          "required": "Informe um nome"
+        }
+      },
+      "lastName": {
+        "placeholder": "Silva",
+        "label": "Sobrenome",
+        "errors": {
+          "required": "Informe um sobrenome"
+        }
+      },
+      "email": {
+        "placeholder": "exemplo@email.com",
+        "label": "Email",
+        "errors": {
+          "required": "Informe um email",
+          "email": "Informe um email válido"
+        }
+      },
+      "phone": {
+        "placeholder": "999999999",
+        "label": "Telefone",
+        "errors": {
+          "required": "Informe um número válido"
+        }
+      },
+      "subject": {
+        "placeholder": "Assunto",
+        "label": "Assunto",
+        "errors": {
+          "required": "Informe um assunto"
+        }
+      },
+      "message": {
+        "placeholder": "Mensagem",
+        "label": "Mensagem",
+        "errors": {
+          "required": "Informe uma mensagem"
+        }
+      },
+      "submitButton": "Enviar"
+    }
   }
 }

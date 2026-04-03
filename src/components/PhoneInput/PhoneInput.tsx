@@ -7,6 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../shadcn/select";
+import { countryCodes } from "@/constants/countryCodes";
 
 interface Props {
   options: { label: string; value: string }[];
@@ -15,9 +16,10 @@ interface Props {
   value: string;
 }
 
-const PhoneInput = ({ options, error, setValue, value = "" }: Props) => {
+const PhoneInput = ({ error, setValue, value = "" }: Props) => {
   const code = value.split(" ")[0] || "";
   const number = value.split(" ")[1] || "";
+  const flag = countryCodes.find((opt) => opt.code === code)?.flag || "";
   return (
     <div
       className={cn(
@@ -32,13 +34,16 @@ const PhoneInput = ({ options, error, setValue, value = "" }: Props) => {
         }
       >
         <SelectTrigger className="rounded-none text-text-1 border-r-px border-r-border-1 w-25">
-          <SelectValue placeholder="+51" />
+          <SelectValue placeholder="+51">{code + " " + flag}</SelectValue>
         </SelectTrigger>
         <SelectContent position="popper">
-          {options.map((opt) => {
+          {countryCodes.map((opt) => {
             return (
-              <SelectItem key={opt.value} value={opt.value}>
-                {opt.label}
+              <SelectItem key={opt.code} value={opt.code}>
+                <div className="flex justify-between w-40">
+                  <span>{opt.label}</span>
+                  <span>{opt.flag}</span>
+                </div>
               </SelectItem>
             );
           })}

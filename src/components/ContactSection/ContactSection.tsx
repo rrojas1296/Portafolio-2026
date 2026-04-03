@@ -16,24 +16,15 @@ const ContactSection = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
     control,
   } = useForm({
     resolver: zodResolver(contactSchema),
   });
-  console.log({
-    form: watch(),
-  });
 
-  const onSubmit = handleSubmit(
-    (data) => {
-      console.log({ data });
-    },
-    (err) => {
-      console.log({ err });
-    },
-  );
+  const onSubmit = handleSubmit((data) => {
+    console.log({ data });
+  });
   return (
     <section id="contact" className="w-10/12 max-w-7xl mx-auto mt-35">
       <h1 className="font-bold text-3xl text-text-1">{t("title")}</h1>
