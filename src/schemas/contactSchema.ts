@@ -41,30 +41,35 @@ export const contactControls: Control<keyof ContactSchema>[] = [
     label: "form.firstName.label",
     placeholder: "form.firstName.placeholder",
     type: "text",
+    required: true,
   },
   {
     name: "lastName",
     label: "form.lastName.label",
     placeholder: "form.lastName.placeholder",
     type: "text",
+    required: true,
   },
   {
     name: "email",
     label: "form.email.label",
     placeholder: "form.email.placeholder",
     type: "email",
+    required: true,
   },
   {
     name: "phone",
     label: "form.phone.label",
     placeholder: "form.phone.placeholder",
     type: "phone",
+    required: true,
   },
   {
     name: "subject",
     label: "form.subject.label",
     placeholder: "form.subject.placeholder",
     type: "text",
+    required: true,
   },
   {
     name: "message",
@@ -72,5 +77,6 @@ export const contactControls: Control<keyof ContactSchema>[] = [
     placeholder: "form.message.placeholder",
     type: "textarea",
     className: "lg:col-span-2 h-48",
+    required: true,
   },
 ];

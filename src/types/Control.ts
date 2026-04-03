@@ -8,4 +8,5 @@ export interface Control<T> {
   placeholder: string;
   type: ControlType;
   className?: string;
+  required?: boolean;
 }

@@ -15,6 +15,7 @@ interface Props extends UseFormRegisterReturn {
   className?: string;
   placeholder?: string;
   control?: any;
+  required?: boolean;
 }
 const Control = ({
   label,
@@ -23,6 +24,7 @@ const Control = ({
   type,
   error,
   className,
+  required = false,
   ...props
 }: Props) => {
   const generateInput = () => {
@@ -58,6 +60,7 @@ const Control = ({
     <div className={cn("flex flex-col gap-1", className)}>
       <label className="text-sm text-text-1" htmlFor={name}>
         {label}
+        {required && <span className="text-red-400"> *</span>}
       </label>
       {generateInput()}
       {error && <p className="text-sm text-red-400">{error}</p>}

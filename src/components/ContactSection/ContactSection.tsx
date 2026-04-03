@@ -22,8 +22,13 @@ const ContactSection = () => {
     resolver: zodResolver(contactSchema),
   });
 
-  const onSubmit = handleSubmit((data) => {
-    console.log({ data });
+  const onSubmit = handleSubmit(async (data) => {
+    const r = await fetch("/api/contact", {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+    const d = await r.json();
+    console.log({ d });
   });
   return (
     <section id="contact" className="w-10/12 max-w-7xl mx-auto mt-35">
@@ -57,13 +62,14 @@ const ContactSection = () => {
           className="grid grid-cols-1 mt-10 lg:mt-0 lg:grid-cols-2 gap-y-3 gap-x-8 lg:w-8/12"
         >
           {contactControls.map(
-            ({ name, label, type, placeholder, className }) => {
+            ({ name, label, type, placeholder, className, required }) => {
               const error = errors[name]?.message || "";
               return (
                 <Control
                   key={name}
                   label={t(label)}
                   placeholder={t(placeholder)}
+                  required={required}
                   error={error && t(error)}
                   type={type}
                   className={className}
