@@ -1,8 +1,9 @@
 import { Resend } from "resend";
 import EmailTemplate from "@/components/EmailTemplate/EmailTemplate";
 import { NextRequest } from "next/server";
+import { MAIN_EMAIL, RESEND_API_KEY } from "@/config/environments";
 
-const resend = new Resend(process.env.RESEND_API_KEY || "");
+const resend = new Resend(RESEND_API_KEY);
 
 export const POST = async (req: NextRequest) => {
   try {
@@ -10,7 +11,7 @@ export const POST = async (req: NextRequest) => {
       await req.json();
     const data = await resend.emails.send({
       from: "Acme <onboarding@resend.dev>",
-      to: ["rrojas1296@gmail.com"],
+      to: [MAIN_EMAIL],
       subject,
       react: EmailTemplate({
         firstName,

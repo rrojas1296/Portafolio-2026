@@ -1,5 +1,5 @@
 "use client";
-import { MailIcon, PhoneIcon, RocketIcon } from "lucide-react";
+import { LoaderIcon, MailIcon, PhoneIcon, RocketIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import GithubIcon from "../Icons/GithubIcon";
@@ -10,28 +10,40 @@ import Control from "../Control/Control";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Button from "../Button/Button";
+import { useState } from "react";
 
 const ContactSection = () => {
   const t = useTranslations("Contact");
+  const [loading, setLoading] = useState(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
     control,
   } = useForm({
     resolver: zodResolver(contactSchema),
   });
 
   const onSubmit = handleSubmit(async (data) => {
-    const r = await fetch("/api/contact", {
-      method: "POST",
-      body: JSON.stringify(data),
-    });
-    const d = await r.json();
-    console.log({ d });
+    try {
+      setLoading(true);
+      await fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify(data),
+      });
+      reset();
+    } catch (err) {
+      console.log({ err });
+    } finally {
+      setLoading(false);
+    }
   });
   return (
-    <section id="contact" className="w-10/12 max-w-7xl mx-auto mt-35">
+    <section
+      id="contact"
+      className="w-10/12 max-w-7xl mx-auto mt-35 mb-14 lg:mb-0"
+    >
       <h1 className="font-bold text-3xl text-text-1">{t("title")}</h1>
       <h2 className="text-text-2 text-sm mt-1">{t("subtitle")}</h2>
 
@@ -81,7 +93,11 @@ const ContactSection = () => {
           )}
           <Button className="lg:col-span-2">
             {t("form.submitButton")}
-            <RocketIcon className="text-text-3 " />
+            {loading ? (
+              <LoaderIcon className="text-text-3 animate-spin" />
+            ) : (
+              <RocketIcon className="text-text-3 " />
+            )}
           </Button>
         </form>
       </div>
