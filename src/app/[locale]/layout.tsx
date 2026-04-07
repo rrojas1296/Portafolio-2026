@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { cn } from "@/lib/utils";
 import "@/styles/index.css";
 import ThemeProvider from "@/providers/ThemeProvider";
+import { Toaster } from "@/components/shadcn/sonner";
 
 const font = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -25,6 +26,7 @@ export default function RootLayout({
         <ThemeProvider>
           <NextIntlClientProvider>{children}</NextIntlClientProvider>
         </ThemeProvider>
+        <Toaster />
       </body>
     </html>
   );

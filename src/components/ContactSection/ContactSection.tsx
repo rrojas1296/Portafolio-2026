@@ -7,6 +7,7 @@ import LinkedinIcon from "../Icons/LinkedinIcon";
 import InstagramIcon from "../Icons/InstagramIcon";
 import { contactControls, contactSchema } from "@/schemas/contactSchema";
 import Control from "../Control/Control";
+import { toast } from "sonner";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Button from "../Button/Button";
@@ -39,6 +40,9 @@ const ContactSection = () => {
           ...data,
           phone: data.phone.code + " " + data.phone.number,
         }),
+      });
+      toast.success("Mensaje enviado satisfactoriamente", {
+        position: "top-right",
       });
       reset();
     } catch (err) {
