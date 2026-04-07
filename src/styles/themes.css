@@ -17,6 +17,7 @@
   --border-2: #beb9ce;
 
   --danger: #f23353;
+  --success: #52de5b;
 }
 
 .dark {
@@ -38,4 +39,5 @@
   --border-2: #33303f;
 
   --danger: #f23353;
+  --success: #52de5b;
 }

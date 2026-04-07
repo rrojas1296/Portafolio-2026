@@ -12,6 +12,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Button from "../Button/Button";
 import { useState } from "react";
+import Toast from "../Toast/Toast";
 
 const ContactSection = () => {
   const t = useTranslations("Contact");
@@ -41,9 +42,12 @@ const ContactSection = () => {
           phone: data.phone.code + " " + data.phone.number,
         }),
       });
-      toast.success("Mensaje enviado satisfactoriamente", {
-        position: "top-right",
-      });
+      toast.custom(
+        () => <Toast type="success" text={t("messages.success")} />,
+        {
+          position: "top-right",
+        },
+      );
       reset();
     } catch (err) {
       console.log({ err });

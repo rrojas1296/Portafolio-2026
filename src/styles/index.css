@@ -24,6 +24,7 @@
   --color-border-2: var(--border-2);
 
   --color-danger: var(--danger);
+  --color-success: var(--success);
 }
 
 @theme inline {

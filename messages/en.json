@@ -88,6 +88,9 @@
   "Contact": {
     "title": "Let's work together",
     "subtitle": "I’m available for remote opportunities, freelance projects, or collaborations on SaaS products.",
+    "messages": {
+      "success": "Message sent successfully."
+    },
     "info": {
       "email": "rrojas1296@gmail.com",
       "phone": "+51 976469908"

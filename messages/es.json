@@ -89,6 +89,9 @@
   "Contact": {
     "title": "Trabajemos juntos",
     "subtitle": "Estoy disponible para oportunidades remotas, proyectos freelance o colaboraciones en productos SaaS.",
+    "messages": {
+      "success": "Mensaje enviado correctamente."
+    },
     "info": {
       "email": "rrojas1296@gmail.com",
       "phone": "+51 976 469 908"
