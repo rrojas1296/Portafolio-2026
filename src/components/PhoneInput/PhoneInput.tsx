@@ -11,17 +11,23 @@ import {
 import { countryCodes } from "@/constants/countryCodes";
 
 interface Props {
-  options: { label: string; value: string }[];
   error?: string;
-  setValue: (value: string) => void;
-  value: string;
+  setValue: (value: { code: string; number: string }) => void;
+  value: {
+    code: string;
+    number: string;
+  };
 }
 
-const PhoneInput = ({ error, setValue, value = "" }: Props) => {
-  const code = value.split(" ")[0] || "";
-  const iso = (countryCodes.find((opt) => opt.code === code)?.iso ||
-    "") as CountryCode;
+const PhoneInput = ({
+  error,
+  setValue,
+  value: { code = "", number = "" },
+}: Props) => {
+  const iso =
+    (countryCodes.find((opt) => opt.code === code)?.iso as CountryCode) || "";
   const flag = countryCodes.find((opt) => opt.code === code)?.flag || "";
+
   return (
     <div
       className={cn(
@@ -30,9 +36,12 @@ const PhoneInput = ({ error, setValue, value = "" }: Props) => {
           "border-danger focus-within:ring-danger/50 focus-within:ring-2",
       )}
     >
-      <Select value={code} onValueChange={(value) => setValue(value)}>
+      <Select
+        value={code}
+        onValueChange={(value) => setValue({ code: value, number: "" })}
+      >
         <SelectTrigger className="rounded-none text-text-1 border-r-px border-r-border-1 w-18">
-          <SelectValue placeholder="+51">{flag}</SelectValue>
+          <SelectValue>{flag}</SelectValue>
         </SelectTrigger>
         <SelectContent position="popper">
           {countryCodes.map((opt) => {
@@ -48,15 +57,15 @@ const PhoneInput = ({ error, setValue, value = "" }: Props) => {
         </SelectContent>
       </Select>
       <Input
+        value={number}
         className="border-none outline-none focus-visible:ring-0 focus-visible:border-none"
-        value={value}
-        type="tel"
         placeholder={countryCodes.find((opt) => opt.code === code)?.placeholder}
+        type="text"
         onChange={(e) => {
-          const value = e.target.value;
-          const f = new AsYouType(iso).input(value);
-          console.log({ f, value });
-          setValue(f);
+          const f = iso
+            ? new AsYouType(iso).input(e.target.value)
+            : e.target.value;
+          setValue({ code, number: f });
         }}
       />
     </div>

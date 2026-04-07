@@ -40,11 +40,6 @@ const Control = ({
                   setValue={field.onChange}
                   value={field.value}
                   error={error}
-                  options={[
-                    { label: "+51", value: "+51" },
-                    { label: "+52", value: "+52" },
-                    { label: "+54", value: "+54" },
-                  ]}
                 />
               );
             }}
