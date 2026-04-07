@@ -63,7 +63,7 @@
           "description": "Participe en el desarrollo de JabuPay, una plataforma fintech serverless para la gestión de efectivo digital. Enfocarse en implementar la lógica backend mediante funciones serverless y flujos de autenticación seguros, mientras se contribuye a la consistencia del frontend y al rendimiento del sistema."
         },
         "lapzo": {
-          "name": "Lazpo",
+          "name": "Lapzo",
           "role": "Desarrollador Fullstack",
           "date": "Mayo 2023",
           "description": "Contribuí al desarrollo de una plataforma educativa de nivel empresarial que proporciona a las empresas herramientas para gestionar cursos, lecciones, instructores y programas de formación. Trabajé tanto en frontend como en backend, diseñando interfaces de usuario modernas y desarrollando aplicaciones web escalables."
@@ -77,7 +77,8 @@
     "projects": {
       "buttons": {
         "preview": "Previsualizar",
-        "github": "Github"
+        "github": "Github",
+        "figma": "Figma"
       },
       "neovim": {
         "name": "Neovim conf",
@@ -90,7 +91,7 @@
     "subtitle": "Estoy disponible para oportunidades remotas, proyectos freelance o colaboraciones en productos SaaS.",
     "info": {
       "email": "rrojas1296@gmail.com",
-      "phone": "+51 976469908"
+      "phone": "+51 976 469 908"
     },
     "form": {
       "firstName": {

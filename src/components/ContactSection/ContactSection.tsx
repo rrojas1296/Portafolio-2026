@@ -20,10 +20,12 @@ const ContactSection = () => {
     handleSubmit,
     formState: { errors },
     reset,
+    watch,
     control,
   } = useForm({
     resolver: zodResolver(contactSchema),
   });
+  console.log({ form: watch() });
 
   const onSubmit = handleSubmit(async (data) => {
     try {

@@ -9,10 +9,13 @@ const variants = cva(
     variants: {
       variant: {
         filled: "bg-primary-500 text-text-3",
+        secondary: "bg-black dark:bg-white text-white dark:text-black",
       },
     },
   },
 );
+
+export type ButtonVariant = VariantProps<typeof variants>["variant"];
 
 interface Props
   extends ComponentProps<"button">, VariantProps<typeof variants> {}

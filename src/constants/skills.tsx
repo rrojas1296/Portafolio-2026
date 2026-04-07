@@ -101,7 +101,7 @@ export const skills = [
   {
     id: "16",
     label: "Zustand",
-    image: ZustandImage,
+    icon: ZustandImage,
   },
   {
     id: "17",
@@ -138,4 +138,4 @@ export const skills = [
     label: "Cursor",
     icon: CursorIcon,
   },
-];
+] as const;

@@ -1,8 +1,5 @@
 import { cn } from "@/lib/utils";
-import parsePhoneNumber, {
-  AsYouType,
-  type CountryCode,
-} from "libphonenumber-js";
+import { AsYouType, type CountryCode } from "libphonenumber-js";
 import { Input } from "../shadcn/input";
 import {
   Select,
@@ -30,10 +27,10 @@ const PhoneInput = ({ error, setValue, value = "" }: Props) => {
       className={cn(
         "rounded-lg border border-border-1 h-10 flex",
         error &&
-          "border-red-400 focus-within:ring-red-400/50 focus-within:ring-2",
+          "border-danger focus-within:ring-danger/50 focus-within:ring-2",
       )}
     >
-      <Select onValueChange={(value) => setValue(value)}>
+      <Select value={code} onValueChange={(value) => setValue(value)}>
         <SelectTrigger className="rounded-none text-text-1 border-r-px border-r-border-1 w-18">
           <SelectValue placeholder="+51">{flag}</SelectValue>
         </SelectTrigger>
@@ -58,6 +55,7 @@ const PhoneInput = ({ error, setValue, value = "" }: Props) => {
         onChange={(e) => {
           const value = e.target.value;
           const f = new AsYouType(iso).input(value);
+          console.log({ f, value });
           setValue(f);
         }}
       />

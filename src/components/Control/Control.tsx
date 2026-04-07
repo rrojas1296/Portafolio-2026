@@ -60,10 +60,10 @@ const Control = ({
     <div className={cn("flex flex-col gap-1", className)}>
       <label className="text-sm text-text-1" htmlFor={name}>
         {label}
-        {required && <span className="text-red-400"> *</span>}
+        {required && <span className="text-danger"> *</span>}
       </label>
       {generateInput()}
-      {error && <p className="text-sm text-red-400">{error}</p>}
+      {error && <p className="text-sm text-danger">{error}</p>}
     </div>
   );
 };
