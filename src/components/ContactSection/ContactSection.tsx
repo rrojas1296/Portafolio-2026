@@ -104,7 +104,7 @@ const ContactSection = () => {
             {loading ? (
               <LoaderIcon className="text-text-3 animate-spin" />
             ) : (
-              <RocketIcon className="text-text-3 " />
+              <RocketIcon className="text-text-3" />
             )}
           </Button>
         </form>

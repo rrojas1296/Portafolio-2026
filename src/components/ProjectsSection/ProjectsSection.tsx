@@ -52,7 +52,7 @@ const ProjectsSection = () => {
                   );
                 })}
               </div>
-              <div className="grid grid-cols-2 gap-4 mt-3 font-medium">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3 font-medium">
                 {buttons.map(({ icon: Icon, id, buttonType, url, label }) => {
                   return (
                     <Link key={id} href={url} target="_blank">

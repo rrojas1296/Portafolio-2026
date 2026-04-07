@@ -19,7 +19,7 @@ export function useActiveSection() {
           }
         },
         {
-          rootMargin: "-30% 0px -30% 0px", // 🔥 clave
+          rootMargin: "-80px 0px -80px 0px", // 🔥 clave
           threshold: 0,
         },
       );

@@ -11,10 +11,14 @@ export const contactSchema = z.object({
   email: z.email({
     error: "form.email.errors.required",
   }),
-  phone: z.object({
-    code: z.string(),
-    number: z.string(),
-  }),
+  phone: z
+    .object({
+      code: z.string(),
+      number: z.string().optional(),
+    })
+    .refine((val) => val.code && val.number, {
+      error: "form.phone.errors.required",
+    }),
   subject: z.string().min(1, {
     error: "form.subject.errors.required",
   }),

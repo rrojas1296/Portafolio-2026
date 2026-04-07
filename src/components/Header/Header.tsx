@@ -17,6 +17,7 @@ import { cn } from "@/lib/utils";
 import SpainFlagIcon from "../Icons/SpainFlagIcon";
 import USFlagIcon from "../Icons/USFlagIcon";
 import BrazilFlagIcon from "../Icons/BrazilFlagIcon";
+import { scrollToSection } from "@/lib/scrollToSection";
 
 const Header = () => {
   const active = useActiveSection();
@@ -59,18 +60,19 @@ const Header = () => {
           Drojas
         </Link>
         <div className="hidden lg:flex gap-8">
-          {sections.map(({ id, href, label }) => {
+          {sections.map(({ id, label }) => {
             return (
-              <Link
+              <button
                 key={id}
-                href={href}
+                aria-label={label}
+                onClick={() => scrollToSection(id)}
                 className={cn(
-                  "text-text-1 text-sm",
+                  "text-text-1 text-sm cursor-pointer",
                   active === id && "text-primary-500 font-bold",
                 )}
               >
                 {t(label)}
-              </Link>
+              </button>
             );
           })}
         </div>

@@ -1,3 +1,4 @@
+"use client";
 import HeroImage from "@/assets/HeroImage.png";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -6,6 +7,7 @@ import GithubIcon from "../Icons/GithubIcon";
 import LinkedinIcon from "../Icons/LinkedinIcon";
 import InstagramIcon from "../Icons/InstagramIcon";
 import Button from "../Button/Button";
+import { scrollToSection } from "@/lib/scrollToSection";
 
 const HeroSection = () => {
   const t = useTranslations("Hero");
@@ -31,7 +33,10 @@ const HeroSection = () => {
             <LinkedinIcon className="text-text-1" />
             <InstagramIcon className="text-text-1" />
           </div>
-          <Button className="w-fit px-5">
+          <Button
+            className="w-fit px-5"
+            onClick={() => scrollToSection("contact")}
+          >
             {t("contactButton")}
             <RocketIcon className="text-text-3 w-5 h-5" />
           </Button>
