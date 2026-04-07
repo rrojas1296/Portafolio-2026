@@ -45,7 +45,7 @@ const ContactSection = () => {
       toast.custom(
         () => <Toast type="success" text={t("messages.success")} />,
         {
-          position: "top-right",
+          position: "bottom-center",
         },
       );
       reset();
