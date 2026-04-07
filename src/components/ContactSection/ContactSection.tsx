@@ -35,7 +35,10 @@ const ContactSection = () => {
       setLoading(true);
       await fetch("/api/contact", {
         method: "POST",
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          ...data,
+          phone: data.phone.code + " " + data.phone.number,
+        }),
       });
       reset();
     } catch (err) {
