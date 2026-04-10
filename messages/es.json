@@ -82,7 +82,11 @@
       },
       "neovim": {
         "name": "Neovim conf",
-        "description": "Configuracion de neovim utilizando entermante Lua. Esta configuracion esta preparada para soportar typescript project usando react y vue"
+        "description": "Configuracion de neovim utilizando entermante Lua. Esta configuracion esta preparada para soportar typescript project usando react y vue."
+      },
+      "devflow": {
+        "name": "Devflow",
+        "description": "Aplicacion que muestra las ultimas ofertas de trabajo para toda LATAM. Hace uso de IA y Web scrapping para encontrar las mejores ofertas para programadores."
       }
     }
   },

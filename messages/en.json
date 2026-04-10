@@ -82,6 +82,10 @@
       "neovim": {
         "name": "Neovim config",
         "description": "Neovim configuration built entirely with Lua. This setup is prepared to support TypeScript projects using React and Vue."
+      },
+      "devflow": {
+        "name": "Devflow",
+        "description": "Application that shows the latest job offers for LATAM. Uses AI and web scrapping to find the best offers for programmers."
       }
     }
   },
