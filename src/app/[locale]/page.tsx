@@ -14,8 +14,10 @@ const HomePage = () => {
       <BottomNav />
       <main>
         <HeroSection />
-        <AboutSection />
-        <SkillsSection />
+        <div id="about">
+          <AboutSection />
+          <SkillsSection />
+        </div>
         <ExperienceSection />
         <ProjectsSection />
         <ContactSection />

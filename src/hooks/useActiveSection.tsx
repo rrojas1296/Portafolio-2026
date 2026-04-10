@@ -1,6 +1,5 @@
+import { sections } from "@/constants/sections";
 import { useEffect, useState } from "react";
-
-const sections = ["hero", "about", "experience", "contact"];
 
 export function useActiveSection() {
   const [active, setActive] = useState<string>("hero");
@@ -8,7 +7,7 @@ export function useActiveSection() {
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
 
-    sections.forEach((id) => {
+    sections.forEach(({ id }) => {
       const el = document.getElementById(id);
       if (!el) return;
 
